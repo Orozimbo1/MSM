@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 5em 2em;
+}
+
+.response {
+  width: 60%;
+  background-color: rgba(172, 110, 110, 0.349);
+}
+
+.main div {
+  width: 40%;
+  padding: 2em 1em 1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 1em;
+  font-weight: 700;
+  padding-top: 1.5em;
+}
+
+.form input {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin: .5em 0;
+}
+
+.form input[type='submit'] {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.form input[type='submit']:hover {
+  border: 1px solid blue;
+  background-color: #fff;
+  color: blue;
+}
