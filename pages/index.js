@@ -16,9 +16,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <section className={styles.response}>
-
+          <div>
+            <h2>Número de Ripas: <span>00</span></h2>
+            <h2>Largura do Vão: <span>00</span></h2>
+          </div>
         </section>
-        <div>
+        <div className={styles.cad}>
           <h2>Preencha os campos abaixo</h2>
           <form className={styles.form}>
             <label>Tamanho da ripa:</label>

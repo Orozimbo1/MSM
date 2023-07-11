@@ -6,13 +6,39 @@
 }
 
 .response {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 60%;
-  background-color: rgba(172, 110, 110, 0.349);
+  background: url('../public/moveis.jpg') no-repeat right center;
+  background-size: cover;
 }
 
-.main div {
+.response div {
+  width: 80%;
+  margin: 1em auto;
+  padding: 1em;
+  background-color: #cccccca4;
+}
+
+.response h2 {
+  display: flex;
+  justify-content: space-between;
+  color: #1f1e1e;
+  width: 80%;
+  font-size: 1.6em;
+  margin: .3em 0;
+}
+
+.response span {
+  color: black;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.main .cad {
   width: 40%;
-  padding: 2em 1em 1em;
+  padding: 1em;
 }
 
 .form {
