@@ -1,11 +1,27 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
-
 const inter = Inter({ subsets: ['latin'] })
 
+
+// Hooks
+import { useEffect, useState } from 'react'
+
 export default function Home() {
+  const [largRipa, setLargRipa] = useState('')
+  const [largMaxVao, setLargMaxVao] = useState('')
+  const [comprimento, setComprimento] = useState('')
+  const [numeroRipas, setNumeroRipas] = useState(0)
+  const [largVao, setLargVao] = useState(0)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    console.log(largRipa)
+    console.log(largMaxVao)
+    console.log(comprimento)
+  }
+
   return (
     <>
       <Head>
@@ -17,20 +33,32 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.response}>
           <div>
-            <h2>Número de Ripas: <span>00</span></h2>
-            <h2>Largura do Vão: <span>00</span></h2>
+            <h2>Número de Ripas: <span>{numeroRipas}</span></h2>
+            <h2>Largura do Vão: <span>{largVao}</span></h2>
           </div>
         </section>
         <div className={styles.cad}>
           <h2>Preencha os campos abaixo</h2>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <label>Tamanho da ripa:</label>
-            <input type="text" />
+            <input type="text"
+              placeholder='Tamanho em cm' 
+              onChange={(e) => setLargRipa(e.target.value)}
+              value={largRipa}
+            />
             <label>Tamanho máximo do vão:</label>
-            <input type="text" />
+            <input type="text"
+              placeholder='Tamanho em cm' 
+              onChange={(e) => setLargMaxVao(e.target.value)}
+              value={largMaxVao}
+            />
             <label>Comprimento total:</label>
-            <input type="text" />
-            <input type="submit" value="Calcular" />
+            <input type="text"
+              placeholder='Tamanho em cm' 
+              onChange={(e) => setComprimento(e.target.value)}
+              value={comprimento}
+            />
+            <input type="submit" value="Calcular"/>
           </form>
         </div>
       </main>
