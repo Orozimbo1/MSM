@@ -14,12 +14,24 @@ export default function Home() {
   const [numeroRipas, setNumeroRipas] = useState(0)
   const [largVao, setLargVao] = useState(0)
 
+  const calcular = (ripa, vaoMax, comprimento) => {
+    let numeroRipas = 2
+    let vao = (comprimento - (numeroRipas * ripa)) / (numeroRipas - 1)
+  
+    if(comprimento < 2 * ripa) return 'chifre'
+    while(vao > vaoMax) {
+      numeroRipas++
+      vao = (comprimento - (numeroRipas * ripa)) / (numeroRipas - 1)
+    }
+
+    setNumeroRipas(numeroRipas)
+    setLargVao(vao.toFixed(2))
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log(largRipa)
-    console.log(largMaxVao)
-    console.log(comprimento)
+    calcular(largRipa, largMaxVao, comprimento)
   }
 
   return (
