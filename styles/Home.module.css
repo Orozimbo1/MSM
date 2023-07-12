@@ -76,3 +76,19 @@
   background-color: #fff;
   color: blue;
 }
+
+@media screen and (max-width: 425px) {
+  .main {
+    flex-direction: column;
+    width: 100vw;
+    padding: 1em;
+  }
+
+  .response {
+    width: 100%;
+  }
+
+  .main .cad {
+    width: 100%;
+  }
+}
