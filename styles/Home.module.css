@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 80vw;
   margin: 0 auto;
-  padding: 5em 2em;
+  padding: 2em;
 }
 
 .main div {
@@ -67,10 +67,11 @@
 
 .response h2 {
   display: flex;
-  justify-content: space-between;
+  gap: 1em;
   color: #1f1e1e;
   width: 80%;
   font-size: 1.6em;
+  padding: 0 1em;
   margin: .3em 0;
 }
 
@@ -80,10 +81,34 @@
   letter-spacing: .1em;
 }
 
+.response table {
+  width: 100%;
+}
+
+.response table, 
+.response th, 
+.response td {
+  border: 1px solid #161616;
+  border-collapse: collapse;
+  text-align: left;
+  padding: .8em ;
+}
+
+.response table thead {
+  background-color: #1f1e1e;
+  color: whitesmoke;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
 @media screen and (max-width: 425px) {
   .main {
-    flex-direction: column;
     width: 100vw;
+  }
+
+  .main div {
+    flex-direction: column;
     padding: 1em;
   }
 
